@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: black;
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: yellowgreen;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.AREA-with-backimage{
+    background-image:url(images/back-3.jpg);
+    background-size: cover;
+    image-rendering: crisp-edges;
+    background-position: 50% 50%;
+    height: 100%;
+    image-rendering: -moz-crisp-edges;          /* Firefox */
+    image-rendering: -o-crisp-edges;            /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+    -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
+    image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
+
+}
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding: 40px 100px;
+    transition: 2s;
+    z-index: 10000000;
+    
+}
+
+header.sticky{
+    padding:5px 100px;
+    background-color: black;
+    
+}
+header ul{
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+ul li{
+    
+    display: flex;
+
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-decoration: overline;
+    color: rgb(255, 255, 255);
+    font-size:x-large;
+    animation-name: grow;
+    animation-duration: 0.1s;
+    transition: all 1s;
+    padding-left: 3%;
+}
+
+.navigate{
+    
+    color: rgb(245, 245, 245);
+    text-decoration: overline;
+    font-size:x-large;
+
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: bolder;
+ 
+}
+.bobs{
+    color:blue;
+    font-size: x-large;
+    animation-name: grow;
+    animation-duration: 0.1s;
+    transition: all 1s;
+    background-color: blue;
+}
+@keyframes grow{
+    from{width: 50px; height:50px;bottom:0;}
+    to{width: 200px; height:200px;bottom:50%;}
+}
+ul li:hover{
+    font-size: xx-large;
+    color: rgba(255, 0, 0, 0.589);
+}
+body{
+    background-color: rgba(0, 0, 0, 0.897);
+ 
+}
+ul li:first-child{
+    padding-left: 0%;
+}
+ul li:nth-child(2){
+    padding-left:65%;
+}
+
+
+.title-of-page{
+    color:white;
+    padding-top:10rem;
+    display: grid;
+    place-items: center;
+    align-content: center;
+
+
+    text-decoration: overline;
+    font-size: 80px;
+    font-family: 'Bebas Neue', sans-serif;
+    animation-name: fade-in;
+    animation-duration: 1.5s;
+    transition: all 1s;
+    
+}
+
+.desc-under-title{
+    color:white;
+    padding-top:3rem;
+    
+    display: grid;
+    place-items: center;
+    align-content: center;
+    font-size: 20px;
+
+    padding-bottom: 20%;
+    font-family: 'Bebas Neue', sans-serif;
+    animation-name: fade-in;
+    animation-duration: 1.5s;
+    transition: all 1s;
+}
+
+.desc-under-title h1{
+    padding-bottom:4rem;
+}
+
+@keyframes fade-in{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.contact-button{
+    
+    background-color: yellowgreen;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    text-align: center;
+    padding-left:2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: 0 0 5px 5px black ;
+}
+.link-contact{
+    
+    color:white;
+    text-decoration: none;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    
+}
+
+.link-contact:hover{
+    font-size: 60px;
+    animation:increase-size 1s;
+    text-align: center;
+}
+
+.link-contact:visited{
+    text-decoration: none;
+    font-size: 50px;
+    animation:increase-size 1s;
+    text-align: center;
+}
+
+.link-contact:visited:hover{
+    text-decoration: none;
+    font-size: 50px;
+    animation:increase-size 1s;
+    text-align: center;
+}
+
+
+@keyframes increase-size{
+    from{
+        font-size: 50px;
+    }
+    to{
+        font-size:60px;
+    }
+}
+
+
+.text-box2{
+   
+    color:white;
+    min-height: 50vh;
+    display: grid;
+    place-items: center;
+    align-content: center;
+
+
+}
+
+.text-box2{
+    align-content:center;
+  
+
+}
+
+
+.text-box2 h1{
+    font-size: 100px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+.signupwords{
+    color:white;
+    padding-top:10rem;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    
+    
+}
+.signupwords-writing{
+    font-size: 40px;
+    width: 100ch;
+    font-family: 'Bebas Neue', sans-serif;
+    padding-bottom: 30rem;
+    opacity:0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition:all 1s;
+}
+
+
+.background-3{
+    padding:10rem;
+    background-color: rgba(128, 128, 128, 0.281);
+    display: grid;
+    place-items: center;
+    align-content: center;
+    
+}
+
+.box{
+    padding: 10rem;
+    box-shadow: 0 0 50px 15px yellowgreen;
+    background-color: rgba(0, 0, 0, 0.897);
+}
+.box .why-us{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    color:yellowgreen;
+    text-decoration: overline;
+
+}
+
+.box .why-us h2{
+    font-size:100px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: left;
+}
+
+.box .why-us-desc{
+
+    padding-top: 5rem;
+
+    
+}
+
+.writing1{
+    color:yellowgreen;
+    font-size: 50px;
+    font-family: 'Bebas Neue', sans-serif;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    text-align: left;
+    opacity:0;
+    filter: blur(5px);
+
+    transition:all 2s;
+}
+
+.writing2{
+    
+    color:white;
+
+    font-size:30px;
+    width:50ch;
+    font-family: 'Bebas Neue', sans-serif;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    opacity:0;
+    filter: blur(5px);
+
+    transition:all 2s;
+}
+
+.box .our-experience{
+    padding-top: 10rem;
+    
+    
+}
+
+
+.box .our-experience h1{
+    color:yellowgreen;
+    font-size: 50px;
+    font-family: 'Bebas Neue', sans-serif;
+    width:50ch;
+    display: grid;
+    place-items: end;
+    text-align: right;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    
+}
+
+.box .our-experience h2{
+    color:white;
+
+    font-size:30px;
+    padding-left: 40%;
+    width:50ch;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: right;
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+
+
+
+.description{
+    color:white;
+    padding-top:10rem;
+    padding-bottom: 70rem;
+    padding-left:4rem;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    opacity:1;
+
+}
+.description .intro{
+    text-decoration: none;
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Bebas Neue', sans-serif;
+    padding:10rem;
+}
+.description .disc{
+    padding-top: 10rem;
+    text-decoration:none;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Times New Roman', sans-serif
+}
+.description .contacts{
+    padding-left: 6rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.description .contacts img{
+    padding-left:10rem;
+}
+
+
+.description .contacts .item1 img{
+    padding-left: 5rem;
+}
+.description .contacts .item2 img{
+    padding-left: 6rem;
+}
+.description .contacts .item{
+    padding-right:15rem;
+}
+.description .contacts .item1{
+    padding-right:15rem;
+}
+.description .contacts .item2{
+    padding-right:15rem;
+}
+
+.description h3{
+    padding-right:3rem;
+}
+
+@keyframes slide-up{
+    from{
+        opacity: 0.2;
+        line-height:200px;
+    }
+    to{
+        opacity: 1;
+        line-height: 20px;
+    }
+}
+.Learns{
+    color:yellowgreen;
+    display: inline-block;
+}
+
+.show{
+    opacity: 1;
+    filter:blur(0);
+    transform: translateX(0);
+}
+header{
+    position:fixed;
+    top:0;
+    width:90%;
+    padding: 40px 100px;
+    transition: 2s;
+
+  
+}
+
+header.sticky{
+    padding:5px 100px;
+    background-color: yellowgreen;
+}
+header ul{
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li{
+    
+    display: flex;
+
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-decoration: overline;
+    color: rgb(255, 255, 255);
+    font-size:x-large;
+    animation-name: grow;
+    animation-duration: 0.1s;
+    transition: all 1s;
+    padding-left: 3%;
+}

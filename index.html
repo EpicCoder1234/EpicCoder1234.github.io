@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCraft Academy</title>
+    <link rel="stylesheet" href="new.css">
+    <script defer src = "home.js"></script>
+</head>
+<body>
+    <header>
+        <ul>
+        <li><a class = "logo" href = "index.html">Home</a></li>
+        <li><a class = "navigate" href = "signup.html">Sign Up</a></li>
+        <li><a class = "navigate" href = "learn_more.html">Learn</a></li>
+        <li><a class = "navigate" href = aboutus.html>About Us</a></li>
+        <li><a class = "navigate" href = "contactus.html">Contact Us</a></li>
+       </ul>
+    </header>
+   
+
+   <script type = "text/javascript">
+    window.addEventListener("scroll", function(){
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY>0);
+    })
+  </script>
+<div class= "AREA-with-backimage">
+    <div class = "title-of-page">
+        <h1 class = "Learns">CodeCraft Academy</h1>
+       </div>
+    
+       <div class = "desc-under-title">
+        <h1>A group of seasoned programmers teaching your children how to code, for free</h1>
+        <div class = "contact-button">
+            <a class = "link-contact" href = "signup.html">Sign Up Now</a>
+        </div>
+       </div>
+
+
+</div>
+   
+   <div class = "text-box2">
+        <h1><span class = "Learns">Learn Coding</span>  <span class = "auto-type"></span></h1>
+
+   </div>
+   <div class = "signupwords">
+    <h2 class = "signupwords-writing">
+        In today's ever-evolving society, proficiency in computer programming is no longer just a valuable skill; it is a necessity. Python, as a versatile and user-friendly programming language, offers an exceptional foundation for your children to not only grasp the fundamentals of coding but also to develop problem-solving abilities, logical thinking, and creativity. Contact us below to have your child embark on their journey to becoming experienced programmers. Trust us, we won't let you down.
+    </h2>
+   </div>
+   
+   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+   <div class = "background-3">
+
+<div class="box">
+    <div class="why-us">
+        <h2>Why us?</h2>
+       </div>
+    
+       <div class = "why-us-desc">
+        <h1 class = "writing1">We may be new to your student, but we are not new to teaching</h1>
+        <h2 class = "writing2">We have held tutoring roles in orginizations like kumon teaching students from ages 5 all the way to ages 14</h2>
+        <h2 class = "writing2">We peer tutor students in our classes who are struggling, from math all the way to computer science</h2>
+        <h2 class = "writing2">We are trusted by our peers, our students, and our teachers to always strive for excellence </h2>
+    </div>
+    
+    
+        <div class = "our-experience">
+    
+            <h1 class = "writing1">Not only are we experienced and trustworthy tutors, we are also experienced programmers</h1>
+            <h2 class = "writing2">Each of the members on our team has over 7+ years of experience with python</h2>
+            <h2 class = "writing2">We are experienced in all aspects of the language, from simply writing it all the way to implementing advanced algorithms and using advanced frameworks like django</h2>
+            <h2 class = "writing2">We have won numerous awards at hackathons using our skills. From using python to create a fully functional graphing calculator, to webscraping thousands of websites to curate data- We have done it all</h2>
+        </div>
+    </div>
+   </div>
+   
+   <script>
+    var typed = new Typed(".auto-type", {
+        strings:["for free", "from experienced tutors", "from advanced programmers", "for fun",],
+        typeSpeed: 150,
+        backSpeed:150,
+        loop: true
+    })
+
+   </script>
+  
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeCraft Academy</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script src="signup.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("Pi2KUUo2bsszJifN2");
+      })();
+    </script>
+    <link rel="stylesheet" href="new.css">
+     <link rel="stylesheet" href="signup.css">
+     
+  </head>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+ 
+  <body>
+    <header> <ul>
+      <li><a class = "navigate" href = "index.html">Home</a></li> 
+      <li><a class = "navigate" href = "signup.html">Sign Up</a></li>
+      <li><a class = "navigate" href = "learn_more.html">Curriculum</a></li>
+      <li><a class = "navigate" href = "aboutus.html">About Us</a></li>
+      <li><a class = "navigate" href = "contactus.html">Contact Us</a></li>
+     </ul></header>
+     
+  
+  
+    
+ 
+    <div class="container">
+      <div>
+       
+        <div>
+          <h1 class = "Sign-up-title">Sign Up</h1>
+          <div class="form-group">
+            <h5 for="name">Name</h5>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              required
+              placeholder="Enter name"
+            />
+          </div>
+          <div class="form-group">
+            <h5 for="email">Email</h5>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              required
+              placeholder="Enter email"
+            />
+          </div>
+
+          <div class="form-group">
+            <h5 for="parent-email">Parent Email</h5>
+            <input
+              type="email"
+              class="form-control"
+              id="parent-email"
+              required
+              placeholder="Parent Email"
+            />
+          </div>
+
+
+          <div class="form-group">
+            <h5 for="message">Age</h5>
+            <input
+               type = "number"
+               class = 'form-control'
+               id="age"
+               required
+               placeholder="Enter Age"
+               />
+          </div>
+
+          
+         <button class = "form-button" onclick = "sendMail()" onclick = "cont">Submit</button>
+        </div>
+      </div>
+    
+    </div>
+  </body>
+</div>
+</html>
