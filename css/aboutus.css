@@ -1,0 +1,82 @@
+.intro h1{
+    align-content:center;
+    text-align:center;
+    font-size:100px;
+    text-decoration: underline;
+    color:yellowgreen;
+}
+
+
+
+body{
+    font-family: 'Bebas Neue', sans-serif;
+    color:whitesmoke;
+    padding-top:10rem;
+}
+
+
+.mission h1{
+    align-content:center;
+    text-align:center;
+    padding-left:10%;
+    padding-right:10%;
+    padding-bottom:10%;
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+.mission .box h2{
+    align-content:center;
+    text-align:center;
+    font-size:50px;
+    color:white;
+    letter-spacing: 2px;
+    word-spacing: 10px;;
+}
+
+.mission{
+    padding:8%;
+}
+
+.box{
+     background:black;
+}
+
+.title h1{
+    align-content:center;
+    text-align:center;
+    padding-left:10%;
+    padding-right:10%;
+
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+
+.people{
+    display:flex;
+    text-align:center;
+    align-content:center;
+    
+}
+.people .item1{
+    padding-left:10%;
+    padding-right:2%;
+}
+.people .item2{
+    padding-right:2%;
+}
+
+.people .item3{
+    padding-right:2%;
+}
+
+.people .item1 img{
+    border-radius:50%;
+}
+.people .item2 img{
+    border-radius:50%;
+}
+
+.people .item3 img{
+    border-radius:50%;
+}
+

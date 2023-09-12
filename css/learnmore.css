@@ -1,0 +1,103 @@
+*{
+    color:white;
+    font-family: 'Bebas Neue', sans-serif;
+
+}
+header{
+    position:fixed;
+    top:0;
+    width:90%;
+    padding: 40px 100px;
+    transition: 2s;
+    z-index: 10000000;
+  
+}
+
+header.sticky{
+    padding:5px 100px;
+    background-color: yellowgreen;
+}
+header ul{
+    position: relative; 
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li{
+    
+    display: flex;
+
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-decoration: overline;
+    color: rgb(255, 255, 255);
+    font-size:x-large;
+    animation-name: grow;
+    animation-duration: 0.1s;
+    transition: all 1s;
+    padding-left: 3%;
+}
+
+body{
+    padding-top:20rem;
+    padding-bottom:20rem;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    text-align: center;
+    background-image:url(images/back-3.jpg);
+    background-size: cover;
+    image-rendering: crisp-edges;
+    background-position: 50% 50%;
+    height: 100%;
+    image-rendering: -moz-crisp-edges;          /* Firefox */
+    image-rendering: -o-crisp-edges;            /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+    -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
+    
+}
+
+.box{
+    
+    box-shadow: 0 0 50px 15px yellowgreen;
+    width:1300px;
+    height:2500px;
+    
+    
+}
+
+.box .intro{
+    text-align:center;
+    font-size: 30px;
+}
+.box .curr{
+    
+    justify-content: center;
+    font-size: 30px;
+}
+.box .curr h1{
+    align-content: center;
+}
+
+.fade-in-learn1{
+    
+    color:yellowgreen;
+    opacity:0;
+    filter: blur(5px);
+
+    transition:all 1s;
+}
+.fade-in-learn2{
+    opacity:0;
+    filter: blur(5px);
+
+    transition:all 1s;
+}
+.show{
+    opacity: 1;
+    filter:blur(0);
+    transform: translateX(0);
+}
