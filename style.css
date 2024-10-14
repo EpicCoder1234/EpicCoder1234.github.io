@@ -18,12 +18,17 @@ body {
 }
 
 /* Navbar Styles */
+body {
+    margin: 0; /* Reset body margin */
+}
+
 .navbar {
     display: flex; /* Flexbox for layout */
     justify-content: space-between; /* Space between items */
     align-items: center; /* Center items vertically */
     background-color: #000; /* Black background */
-    padding: 10px 20px; /* Padding */
+    padding: 20px; /* Padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a shadow */
 }
 
 .logo img {
@@ -33,17 +38,19 @@ body {
 .nav-links {
     list-style: none; /* Remove bullet points */
     display: flex; /* Flexbox for horizontal layout */
-    gap: 20px; /* Spacing between links */
+    gap: 30px; /* Adjust spacing between links */
 }
 
 .nav-links a {
     color: #fff; /* White link color */
     text-decoration: none; /* No underline */
+    font-size: 16px; /* Font size */
     font-weight: bold; /* Bold text */
+    transition: color 0.3s; /* Smooth transition for color */
 }
 
 .nav-links a:hover {
-    text-decoration: underline; /* Underline on hover */
+    color: #f39c12; /* Change color on hover */
 }
 
 .social-icons {
@@ -54,6 +61,11 @@ body {
 .social-icons img {
     width: 24px; /* Icon size */
     height: 24px; /* Icon size */
+    transition: opacity 0.3s; /* Smooth transition for opacity */
+}
+
+.social-icons img:hover {
+    opacity: 0.7; /* Change opacity on hover */
 }
 
 
