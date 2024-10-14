@@ -416,3 +416,34 @@ section{
         padding: 0 10px;
     }
 }
+.footer {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    padding: 20px; /* Padding */
+    text-align: center; /* Center text */
+}
+
+.footer-content {
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+}
+
+.footer-links a {
+    color: #fff; /* White link color */
+    text-decoration: none; /* No underline */
+    margin: 0 15px; /* Horizontal spacing between links */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.logo img {
+    max-width: 100px; /* Adjust logo size */
+    margin-bottom: 15px; /* Space below logo */
+}
+
+.footer-text {
+    margin-top: 10px; /* Space above text */
+}
