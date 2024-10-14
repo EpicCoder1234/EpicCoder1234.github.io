@@ -17,31 +17,45 @@ body {
     color: #fff;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px 20px;
-    z-index: 1000;
+/* Navbar Styles */
+.navbar {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    background-color: #000; /* Black background */
+    padding: 10px 20px; /* Padding */
 }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-end;
-    margin: 0;
+.logo img {
+    max-width: 100px; /* Adjust logo size */
 }
 
-nav ul li {
-    margin-left: 20px;
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Flexbox for horizontal layout */
+    gap: 20px; /* Spacing between links */
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+.nav-links a {
+    color: #fff; /* White link color */
+    text-decoration: none; /* No underline */
+    font-weight: bold; /* Bold text */
 }
+
+.nav-links a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.social-icons {
+    display: flex; /* Flexbox for icons */
+    gap: 15px; /* Spacing between icons */
+}
+
+.social-icons img {
+    width: 24px; /* Icon size */
+    height: 24px; /* Icon size */
+}
+
 
 .bg {
     background: url(https://i.ibb.co/87GbbFP/2799006.jpg) no-repeat;
