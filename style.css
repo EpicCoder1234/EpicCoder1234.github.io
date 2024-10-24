@@ -109,8 +109,8 @@ body {
     z-index: 10;
   }
   #cs-navigation .cs-logo img {
-    width: 100%;
-    height: 100%;
+    width: 20%;
+    height: 20%;
     /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
     object-fit: contain;
   }
@@ -687,408 +687,468 @@ body {
 }
 
 
+/* Background Image and Overlay */
 .bg {
-    background: url(https://i.ibb.co/87GbbFP/2799006.jpg) no-repeat;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -3;
+  background: url(https://i.ibb.co/87GbbFP/2799006.jpg) no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -3;
 }
 .bg:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: #000;
-    position: fixed;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    opacity: 0.3;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
 }
 
-
+/* Hero Section */
 .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-    background: url('hello.jpeg') ;
-    background-size: 100%;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background: url('hello.jpeg') ;
+  background-size: 100%;
+  position: relative;
+  animation: moveBg 30s linear infinite;
 }
 
 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* For a dark overlay */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .hero h1 {
-    font-size: 10rem;
-    font-weight: 700;
-    z-index: 1;
+  font-size: 10rem;
+  font-weight: 700;
+  z-index: 1;
 }
 
 .hero .highlight {
-    color: #fff;
-    background: linear-gradient(90deg, #e91e63, #2196f3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  color: #fff;
+  background: linear-gradient(90deg, #e91e63, #2196f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* About Section Styles */
+
 /* About Section Styles */
 .about-section {
-    padding-left: 60px;
-    padding-right: 60px;
-    text-align: center;
-    background-color: #000;
-    color: #fff;
+  padding-left: 20px; /* Reduced padding for better mobile spacing */
+  padding-right: 20px;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content */
 }
 
 .about-section h2 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 40px;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 40px;
 }
 
 .about-cards {
-    display: flex;
-    justify-content: center; /* Ensures space between cards */
-    gap: 75px; /* Adds space between each card */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
+  gap: 30px; /* Adds space between each card */
+  width: 100%; /* Full width on mobile */
+  max-width: 1600px; /* Limit the width for larger screens */
 }
 
 .about-card {
-    background-color: #111;
-    padding: 20px;
-    border-radius: 25px;
-    width: 20%; /* Each card takes up 30% of the row, keeping them on the same line */
-    box-shadow: 0 0 30px red;
-    background-clip: padding-box;
-    position: relative;
-    z-index: 1;
-    transition: all 0.3s ease;
-}
-.about-card:hover{
-    box-shadow: 0 0 75px greenyellow;
+  background-color: #111;
+  padding: 20px;
+  border-radius: 25px;
+  width: 100%; /* Full width for mobile */
+  max-width: 400px; /* Limit card width on larger screens */
+  box-shadow: 0 0 30px red;
+  position: relative;
+  transition: all 0.3s ease;
+  margin: 0 auto; /* Center the cards */
 }
 
-.about-card::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    box-shadow: 0 0 100px linear-gradient(90deg, #e91e63, #2196f3);
-    z-index: -1;
-    border-radius: 10px;
+.about-card:hover {
+  box-shadow: 0 0 75px greenyellow;
 }
 
 .about-card h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .about-card p {
-    font-size: 1rem;
-    color: #ddd;
+  font-size: 1rem;
+  color: #ddd;
 }
 
-/* Schedule Section Styles */
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-cards {
+      flex-direction: column; /* Stack cards vertically */
+      gap: 20px; /* Adjust gap between cards */
+      align-items: center; /* Ensure cards are centered */
+  }
+
+  .about-card {
+      width: 90%; /* Make the card take up most of the screen width on mobile */
+      max-width: none; /* Remove max-width for mobile */
+  }
+}
+
+
+/* Schedule Section */
 .schedule-section {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #000;
-    color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
 }
 
 .schedule-section h2 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 40px;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 40px;
 }
 
 .schedule-table {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #111;
-    padding: 20px;
-    border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .schedule-table ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .schedule-table li {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 0;
-    border-bottom: 1px solid #333;
-    font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #333;
+  font-size: 1.2rem;
 }
 
 .schedule-table li span {
-    color: #fff;
+  color: #fff;
 }
 
 .schedule-table li span:last-child {
-    color: #f50057;
-}
-
-.schedule-table li:last-child {
-    border-bottom: none;
+  color: #f50057;
 }
 
 .event-details {
-    z-index: 1;
-    margin-top: 20px;
-    font-size: 1.2rem;
-    color: #fff;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #fff;
 }
 
 .event-details a {
-    color: #f50057;
-    text-decoration: none;
+  color: #f50057;
+  text-decoration: none;
 }
 
 .register-btn {
-    margin-top: 30px;
-    padding: 15px 30px;
-    background-color: #f50057;
-    border: none;
-    color: white;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    z-index: 1;
+  margin-top: 30px;
+  padding: 15px 30px;
+  background-color: #f50057;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 .register-btn:hover {
-    background-color: #ff4081;
+  background-color: #ff4081;
 }
 
 /* Galaxy Background Animation */
 @keyframes moveBg {
-    0% { background-position: 0 0; }
-    100% { background-position: 1000px 1000px; }
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
 }
 
-.hero {
-    animation: moveBg 30s linear infinite;
-}
-
-
+/* Header */
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
 header h1 {
-    margin: 0;
+  margin: 0;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
+/* Section Styling */
 section {
-    padding: 50px;
-    text-align: center;
+  padding: 50px;
+  text-align: center;
 }
 
 .schedule-box, .speakers-box, .sponsors-box, .team-box {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.speaker, .team-member, .faq-item {
-    margin: 20px;
+.speaker img, .team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.sponsors-box img{
+  width:20%;
+  height:10%;
 }
 
-.speaker img, .team-member img, .sponsors-box img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-section{
-    padding:50px;
-}
+/* FAQ Section */
 .faq-question {
-    background-color: rgb(18, 13, 13);
-    color: white;
-    border-radius:25px;
-    padding: 30px;
-    border: none;
-    cursor: pointer;
-    width: 50%;
-    text-align: center;
-    font-size:20px;
+  background-color: rgb(18, 13, 13);
+  color: white;
+  border-radius: 25px;
+  padding: 30px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  text-align: center;
+  font-size: 20px;
 }
 
 .faq-answer {
-    display: none;
-    padding: 10px;
-    color:white;
-    background-color: black;
+  display: none;
+  padding: 10px;
+  color: white;
+  background-color: black;
 }
 
 .faq-item {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
-/* Team Section Styles */
+/* Team Section */
 .team-section {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #000;
-    color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
 }
 
 .team-section h2 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 40px;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 40px;
 }
 
-/* Team Grid */
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 members per row */
-    gap: 20px; /* Space between each member */
-    justify-items: center;
-    width: 100%;
-    max-width: 1200px; /* Limit the maximum width */
-    margin: 0 auto; /* Center the grid */
-    padding: 0 60px; /* Large padding on the sides */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 100px;
+  justify-items: center;
+  width: 70%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
 }
 
-/* Team Member Card */
 .team-member {
-    background-color: #111;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 100%;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    text-decoration: none;
-    color: inherit;
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
+  color: inherit;
 }
 
 .team-member:hover {
-    transform: scale(1.05);
-    background-color: #222;
+  transform: scale(1.05);
+  background-color: #222;
 }
 
-/* Team Image */
 .team-image img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-bottom: 10px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
 
 .team-member h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 5px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
 .team-member p {
-    font-size: 1rem;
-    color: #aaa;
+  font-size: 1rem;
+  color: #aaa;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1200px) {
-    .team-grid {
-        grid-template-columns: repeat(4, 1fr); /* 4 members per row */
-        padding: 0 40px; /* Adjust padding for smaller screens */
-    }
-}
-
-@media (max-width: 992px) {
-    .team-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 members per row */
-        padding: 0 30px; /* Further adjust padding */
-    }
-}
-
-@media (max-width: 768px) {
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 members per row */
-        padding: 0 20px;
-    }
-}
-
-@media (max-width: 576px) {
-    .team-grid {
-        grid-template-columns: 1fr; /* 1 member per row */
-        padding: 0 10px;
-    }
-}
+/* Footer */
 .footer {
-    background-color: #000; /* Black background */
-    color: #fff; /* White text color */
-    padding: 20px; /* Padding */
-    text-align: center; /* Center text */
-}
-
-.footer-content {
-    display: flex; /* Flexbox for layout */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items */
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
 .footer-links a {
-    color: #fff; /* White link color */
-    text-decoration: none; /* No underline */
-    margin: 0 15px; /* Horizontal spacing between links */
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
 }
 
 .footer-links a:hover {
-    text-decoration: underline; /* Underline on hover */
+  text-decoration: underline;
 }
 
 .logo img {
-    max-width: 100px; /* Adjust logo size */
-    margin-bottom: 15px; /* Space below logo */
+  max-width: 100px;
+  margin-bottom: 15px;
 }
 
 .footer-text {
-    margin-top: 10px; /* Space above text */
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .hero h1 {
+      font-size: 10rem;
+  }
+
+  .about-section {
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+
+  .about-card {
+      width: 90%;
+      margin-bottom: 20px;
+  }
+
+  .schedule-table li {
+      font-size: 1rem;
+  }
+
+  .register-btn {
+      width: 50%;
+      font-size: 1rem;
+      padding: 10px 20px;
+  }
+
+  .faq-question {
+      width: 90%;
+  }
+
+  .footer {
+      padding: 10px;
+  }
+
+  .footer-links a {
+      margin: 0 10px;
+      font-size: 0.9rem;
+  }
+
+  .footer-text {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .team-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .team-member h3 {
+      font-size: 1rem;
+  }
+
+  .team-member p {
+      font-size: 0.9rem;
+  }
+
+  .hero h1 {
+      font-size: 2rem;
+  }
+
+  .schedule-table ul {
+      padding: 5px;
+  }
+
+  .schedule-table li {
+      padding: 8px 0;
+      font-size: 0.9rem;
+  }
+
+  .register-btn {
+      padding: 10px;
+      font-size: 0.9rem;
+  }
+
+  section {
+      padding: 20px 10px;
+  }
+
+  .footer {
+      padding: 5px;
+  }
+
+  .footer-links a {
+      margin: 0 5px;
+      font-size: 0.8rem;
+  }
+
+  .footer-text {
+      font-size: 0.8rem;
+  }
 }
