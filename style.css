@@ -719,7 +719,7 @@ body {
   justify-content: center;
   height: 100vh;
   text-align: center;
-  background: url('hello.jpeg') ;
+  background: url('hellooo.jpeg') ;
   background-size: 100%;
   position: relative;
   animation: moveBg 30s linear infinite;
@@ -1030,6 +1030,188 @@ section {
 section{
   padding:50px;
 }
+
+/* Sponsor Section Styling */
+.sponsors {
+  text-align: center;
+  padding: 40px;
+  background-color:black; /* Optional dark background */
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.sponsors-header h2 {
+  font-size: 4.0em;
+  margin-bottom: 20px;
+}
+
+.silver-tier {
+  margin-bottom: 40px;
+}
+
+.silver-tier h3 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.sponsor-logos {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.sponsor-logos img {
+  max-width: 300px;
+  height: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+.sponsor-logos img:hover {
+  transform: scale(1.1);
+}
+
+.sponsor-cta {
+  margin-top: 30px;
+  font-size: 1em;
+}
+
+.sponsor-cta a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+.sponsor-cta a:hover {
+  text-decoration: underline;
+}
+/* Special Emphasis for Highlighted Logo */
+.highlight-logo {
+  border: 3px solid #ffd700; /* Gold border */
+  border-radius: 10px;
+  padding: 5px;
+  transform: scale(1.1); /* Slightly larger */
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.7); /* Glowing effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-logo:hover {
+  transform: scale(1.2); /* Slightly larger on hover */
+  box-shadow: 0 0 25px rgba(255, 215, 0, 1); /* Brighter glow */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .sponsor-logos img {
+    max-width: 100px; /* Adjust size for smaller devices */
+  }
+
+  .sponsors-header h2 {
+    font-size: 2em;
+  }
+
+  .silver-tier h3 {
+    font-size: 1.5em;
+  }
+
+  .sponsor-cta {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .sponsor-logos {
+    gap: 15px;
+  }
+
+  .sponsor-logos img {
+    max-width: 80px; /* Smaller size for mobile */
+  }
+
+  .sponsors-header h2 {
+    font-size: 1.8em;
+  }
+
+  .silver-tier h3 {
+    font-size: 1.3em;
+  }
+
+  .sponsor-cta {
+    font-size: 0.8em;
+  }
+}
+
+
+/* Guest Judges Section */
+.guest-judges {
+  padding: 50px 20px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+}
+
+.judges-header h2 {
+  font-size: 4rem;
+  margin-bottom: 30px;
+}
+
+.judges-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.judge-card {
+  background: #1c1c1c;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px; /* Optimized for mobile */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.judge-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.judge-card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+.judge-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.judge-card p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.judge-card a img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .judges-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .judge-card {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 300px;
+  }
+}
+
 /* Judges Section */
 .judges-section {
   padding: 50px 10%;
@@ -1045,8 +1227,8 @@ section{
 }
 
 .judges-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 30px; /* Increased gap between cards */
   justify-content: center; /* Center the grid */
 }
@@ -1057,7 +1239,7 @@ section{
   padding: 20px;
   text-align: center;
   width: 90%;
-  max-width: 900px; /* Ensure cards don’t stretch too wide */
+  max-width: 300px; /* Ensure cards don’t stretch too wide */
   box-shadow: 0 0 6px red;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
