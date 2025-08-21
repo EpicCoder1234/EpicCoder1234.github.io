@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LG Hacks</title>
-    <link rel="icon" href="logo.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LG HACKS 2</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-   <!-- ============================================ -->
+
+<!-- ============================================ -->
 <!--                 Navigation                   -->
 <!-- ============================================ -->
 
-<header id="cs-navigation">
+
+<body>
+
+    <header id="cs-navigation">
     <div class="cs-container">
         <!--Nav Logo-->
         <!--Logo is turned white in the css with a filter on dark mode-->
@@ -94,39 +95,140 @@
         </button> -->
     </div>
 </header>
-             
+  <!-- Hero Section -->
+  <section class="hero">
+    <canvas id="hero-bg"></canvas>
+    <div class="hero-content">
+      <h1>LG HACKS 2.0</h1>
+      <p>📅 October 25th, 2025   |   💵 Free   |   📍 In-Person @ Leigh High School from 8AM to 7PM</p>
+      <a href="#about" class="btn">REGISTER NOW</a>
+    </div>
+  </section>
 
+  <!-- ============================================ -->
+<!--                   Gallery                    -->
+<!-- ============================================ -->
 
-    <!-- Hero Section -->
-     
-    <section class="hero">
-        
-        <h1>LG <span class="highlight">HACKS.</span></h1>
-        <div class="event-details">
-            <p>📅 March 23, 2025 &nbsp; | &nbsp; 💵 Free &nbsp; | &nbsp; 📍 In-Person @ <a href="#">Leigh High School</a> from 8AM to 7PM</p>
+<section id="gallery-404">
+  
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Gallery</span>
+                <h2 class="cs-title">What the experience is like!</h2>
+            </div>
+            <div class="cs-button-group">
+                <button class="cs-button" data-filter="one">
+                    Highlights
+                </button>
+                <button class="cs-button" data-filter="two">
+                    Professional Photos
+                </button>
+            </div>
         </div>
-        <a href="https://tripetto.app/run/PYLYN3ZPE2" target="_blank" class="register-btn">REGISTER</a>
-    </section>
-
-
-    <section id="about" class="about-section">
-        <h2>ABOUT</h2>
-        <div class="about-cards">
-            <div class="about-card">
-                <h3>Fully Catered</h3>
-                <p>You don't have to worry about bringing food to LG Hacks. We will provide snacks, drink, and lunch free of cost.</p>
-            </div>
-            <div class="about-card">
-                <h3>Beginner Friendly</h3>
-                <p>Everyone, regardless of experience, can have fun and have a chance at winning at LG Hacks.</p>
-            </div>
-            <div class="about-card">
-                <h3>Awesome Prizes</h3>
-                <p>Prizes at LG Hacks are worth <strong>$4135</strong>! There is <strong>$1,200</strong> up for grabs in cash prizes in track specific and overall wins! There will be research internships available</p>
-            </div>
+        <div class="cs-gallery-wrapper">
+            <!--Gallery 1-->
+        <div class="cs-gallery" data-category="one">
+            <!--Picture 1-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="images/hack3.jpg">
+                <source media="(min-width: 601px)" srcset="images/hack3.jpg">
+                <img loading="lazy" decoding="async" src="images/hack3.jpg" alt="gallery" width="630" height="400">
+            </picture>
+            <!--Picture 2-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="images/hack4.jpg">
+                <source media="(min-width: 601px)" srcset="images/hack4.jpg">
+                <img loading="lazy" decoding="async" src="images/hack4.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 3-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="images/hack5.jpg">
+                <source media="(min-width: 601px)" srcset="images/hack5.jpg">
+                <img loading="lazy" decoding="async" src="images/hack5.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 4-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="images/hack6.jpg">
+                <source media="(min-width: 601px)" srcset="images/hack6.jpg">
+                <img loading="lazy" decoding="async" src="images/hack6.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 5-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="images/hack7.jpg">
+                <source media="(min-width: 601px)" srcset="images/hack7.jpg">
+                <img loading="lazy" decoding="async" src="images/hack7.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 6-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="images/hack9.jpg">
+                <source media="(min-width: 601px)" srcset="images/hack9.jpg">
+                <img loading="lazy" decoding="async" src="images/hack9.jpg" alt="gallery" width="630" height="400">
+            </picture>
         </div>
-    </section>
-    
+        <!--Gallery 2-->
+        <div class="cs-gallery cs-hidden" data-category="two">
+            <!--Picture 4-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery4.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery4.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery4.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 2-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery5.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery5.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery5.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 3-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery6.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery6.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery6.jpg" alt="gallery" width="630" height="400">
+            </picture>
+            <!--Picture 4-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery1.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery1.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery1.jpg" alt="gallery" width="630" height="400">
+            </picture>
+            <!--Picture 5-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery2.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery2.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery2.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 6-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery3.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery3.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery3.jpg" alt="gallery" width="305" height="400">
+            </picture>
+        </div>
+        </div>
+    </div>
+</section>
+  
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About LG!</h2>
+    <div class="about-grid">
+      <div class="card">
+        <h3>100+ Hackers</h3>
+        <p>Not afraid of a little competiton? Join 100+ high school developers from across the Bay Area and beyond to compete for <strong>$7,000</strong> in prizes! Don't worry, there are many tracks to win!</p>
+      </div>
+      <div class="card">
+        <h3>FREE FOOD AND DRINK</h3>
+        <p>Breakfast and Lunch provided free of cost! Just join the fun!</p>
+      </div>
+      <div class="card">
+        <h3>Full Day and Beginner Friendly</h3>
+        <p>Whether you're a first time programmer or a code whiz, this hackathon is for you. We've got a track for everybody to win. Its not all about the best project, the idea matters!</p>
+      </div>
+    </div>
+  </section>
+
     <section id="schedule" class="schedule-section">
         <h2>SCHEDULE</h2>
         <div class="schedule-table">
@@ -134,12 +236,12 @@
                 <li><span>Check In</span><span>7:30 AM - 8:00 AM</span></li>
                 <li><span>Opening Ceremony</span><span>8:00 AM - 8:30 AM</span></li>
                 <li><span>Hacking Begins</span><span>8:30AM</span></li>
-                <li><span>CodeCraft Academy Workshop with Brenda Ng</span><span>8:30AM</span></li>
+                <li><span>Workshop/Game TBD</span><span></span></li>
                 <li><span>Lunch</span><span>12:30 PM - 1:30 PM</span></li>
-                <li><span>Keynote Speaker - Tyler D'Silva</span><span>12:45 PM</span></li>
+                <li><span>Keynote Speaker TBD</span><span>TBD</span></li>
                 <li><span>Hacking Ends</span><span>6:00pm</span></li>
-                <li><span>Judging</span><span>6:00pm-6:55pm</span></li>
-                <li><span>Prizes and Closing Ceremony</span><span>6:55pm-7:00pm</span></li>
+                <li><span>Judging</span><span>6:00pm-7:25pm</span></li>
+                <li><span>Prizes and Closing Ceremony</span><span>7:25pm-7:30pm</span></li>
             </ul>
         </div>
     </section>
@@ -187,65 +289,399 @@
             </ul>
         </div>
 
+
+  <!-- ============================================ -->
+<!--                    FAQ                       -->
+<!-- ============================================ -->
+
+<section id="faq-1720">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Faq</span>
+            <h2 class="cs-title">Frequently Asked Questions</h2>
+        </div>
+        <div class="cs-flex-group">
+            <div class="cs-button-group">
+                <!--If you need to add another button, make sure to copy and paste from one of the buttons here and increment the data-filter value, so the next one would be data-filter="four", and so on-->
+                <div class="cs-flex">
+                    <button class="cs-option" data-filter="one">
+                        <img class="cs-icon" src="images/hack1.jpg" alt="plus graphic" width="12" height="12" decoding="async" aria-hidden="true">
+                        Amenities
+                    </button>
+                    <button class="cs-option" data-filter="one">
+                        <img class="cs-icon" src="images/hack1.jpg" alt="plus graphic" width="12" height="12" decoding="async" aria-hidden="true">
+                        Bathroom
+                    </button>
+                    <button class="cs-option" data-filter="one">
+                        <img class="cs-icon" src="images/hack1.jpg" alt="plus graphic" width="12" height="12" decoding="async" aria-hidden="true">
+                        Food and Drink
+                    </button>
+                    <button class="cs-option" data-filter="one">
+                        <img class="cs-icon" src="images/hack1.jpg" alt="plus graphic" width="12" height="12" decoding="async" aria-hidden="true">
+                        Recreational Center (basketball/soccer)
+                    </button>
+                    <button class="cs-option" data-filter="one">
+                        <img class="cs-icon" src="images/hack1.jpg" alt="plus graphic" width="12" height="12" decoding="async" aria-hidden="true">
+                        Portable Chargers
+                    </button>
+                </div>
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="images/hack1.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="images/hack1.jpg">
+                    <img loading="lazy" decoding="async" src="images/hack1.jpg" alt="people" width="353" height="493">
+                </picture>
+            </div>
+            <!--We need this wrapper so the absolutely positioned FAQ lists can be positioned to the top of it to so the animations don't amke it overlap the buttons group above it. We needed a wrapper div around it for the faq lists to be relatively positioned to in order to get the effect we wanted-->
+            <div class="cs-wrapper">
+                <!--If you add more FAQ's, copy and paste of of the .cs-faq-grop lists and increment the data-category to the next number. We have three right now, if you added a fourth you'd change it to data-category="four" to correspond to the new button you created in the .cs-button-group. The filter and category data attributes need to match so they can work together-->
+                <ul class="cs-faq-group" data-category="one">
+                    <!-- Active class added as default -->
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                What is a hackathon?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            A hackathon is a coding event where teams collaborate to build a project in a short time frame.
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                               Who can participate?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Any high schooler can participate at the event; graduates not allowed. 
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How do I form/join a team?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            You can form teams of 4; unclaimed competetors can participate in a team-mixer before the event to find a team. You can also participate solo?
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                What should you bring?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Bring a student ID, a laptop, and charger!; Snacks, breakfast, and lunch will be provided!
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                I have dietary restrictions, what do I do?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                           When signing up, specify your restrictions in the form so we can accommodate for them!
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                I can't code, can I still participate?
+                        </button>
+                        <p class="cs-item-p">
+                            Yes! We will have workshops where you can learn coding from our instructors!
+                        </p>
+                    </li>
+                   
+                </ul>
+                <ul class="cs-faq-group cs-hidden" data-category="three">
+                    <!-- Active class added as default -->
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How can I reduce my tax liability as a self-employed individual?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            In the U.S., the terms lawyer and attorney are often used interchangeably. A lawyer provides legal services such as giving legal advice, writing legal documents and providing policy counsel to governments. An attorney, on top of these things also holds a state or regional license to represent clients in a law court.
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                What is the best way to start investing?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            In the U.S., the terms lawyer and attorney are often used interchangeably. A lawyer provides legal services such as giving legal advice, writing legal documents and providing policy counsel to governments. An attorney, on top of these things also holds a state or regional license to represent clients in a law court.
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                What are the tax implications of investing in the stock market?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How can I improve my credit score?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                What is the difference between a traditional IRA and a Roth IRA?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How can I reduce my tax liability as a self-employed individual?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How can I reduce my tax liability as a self-employed individual?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How can I reduce my tax liability as a self-employed individual?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How can I reduce my tax liability as a self-employed individual?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        </p>
+                    </li>
+                </ul>
+                <ul class="cs-faq-group cs-hidden" data-category="four">
+                    <!-- Active class added as default -->
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How can I reduce my tax liability as a self-employed individual?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            In the U.S., the terms lawyer and attorney are often used interchangeably. A lawyer provides legal services such as giving legal advice, writing legal documents and providing policy counsel to governments. An attorney, on top of these things also holds a state or regional license to represent clients in a law court.
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                What is the best way to start investing?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            In the U.S., the terms lawyer and attorney are often used interchangeably. A lawyer provides legal services such as giving legal advice, writing legal documents and providing policy counsel to governments. An attorney, on top of these things also holds a state or regional license to represent clients in a law court.
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                What are the tax implications of investing in the stock market?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How can I improve my credit score?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                What is the difference between a traditional IRA and a Roth IRA?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How can I reduce my tax liability as a self-employed individual?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How can I reduce my tax liability as a self-employed individual?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How can I reduce my tax liability as a self-employed individual?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How can I reduce my tax liability as a self-employed individual?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        </p>
+                    </li>
+                </ul>
+                <ul class="cs-faq-group cs-hidden" data-category="five">
+                    <!-- Active class added as default -->
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How can I reduce my tax liability as a self-employed individual?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            In the U.S., the terms lawyer and attorney are often used interchangeably. A lawyer provides legal services such as giving legal advice, writing legal documents and providing policy counsel to governments. An attorney, on top of these things also holds a state or regional license to represent clients in a law court.
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                What is the best way to start investing?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            In the U.S., the terms lawyer and attorney are often used interchangeably. A lawyer provides legal services such as giving legal advice, writing legal documents and providing policy counsel to governments. An attorney, on top of these things also holds a state or regional license to represent clients in a law court.
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                What are the tax implications of investing in the stock market?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How can I improve my credit score?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                What is the difference between a traditional IRA and a Roth IRA?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How can I reduce my tax liability as a self-employed individual?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How can I reduce my tax liability as a self-employed individual?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How can I reduce my tax liability as a self-employed individual?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How can I reduce my tax liability as a self-employed individual?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-
-    <h2>Keynote Speaker</h2>   
-    <div class = "speakers"> 
-      <div class="keynote-card">
-          <div class="image-container">
-            <img src="tyler.jpeg" alt="TBD" class="speaker-image">
-          </div>
-          <h2 class="speaker-name">Tyler D'Silva</h2>
-          <p class="speaker-title">Founding AI Backend Engineer @ SafetyKit</p>
-          <p class="speaker-bio">
-              I am a Founding AI Backend Engineer at a Y Combinator company in San Francisco called SafetyKit (https://www.safetykit.com/). I work in the Trust and Safety space to monitor customer activity across large organizations including Etsy, Lime, Upwork, etc. to ensure customers follow company policies. <br>
-              I have 3 years of experience working in Software Engineering across multiple domains. I have my undergrad from University of Waterloo, and a Masters degree from Simon Fraser University. I speak at 2:00pm, so stay tuned in!
-          </p>
-        </div>
-      </div>
-        
-
-    <!-- FAQ Section -->
-    <section id="faq">
-        <h2>FAQ</h2>
-        <div class="faq-item">
-            <button class="faq-question">What is a hackathon?</button>
-            <div class="faq-answer">
-                <p>A hackathon is a coding event where teams collaborate to build a project in a short time frame.</p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question">Who can participate?</button>
-            <div class="faq-answer">
-                <p>Any high schooler can participate at the event; graduates not allowed.</p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question">How do I form/join a team?</button>
-            <div class="faq-answer">
-                <p>You can form teams of 4; unclaimed competetors can participate in a team-mixer before the event to find a team. You can also participate solo?</p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question">What should you bring?</button>
-            <div class="faq-answer">
-                <p>Bring a student ID, a laptop, and charger!; Snacks, lunch, and dinner will be provided!</p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question">I have dietary restrictions, what do I do?</button>
-            <div class="faq-answer">
-                <p>When signing up, specify your restrictions in the form so we can accommodate for them!</p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question">I can't code, can I still participate?</button>
-            <div class="faq-answer">
-                <p>Yes! We will have workshops where you can learn coding from our instructors!</p>
-            </div>
-        </div>
-        <!-- Add more FAQs as needed -->
-    </section>
+</section>
     <section class="guest-judges">
         <div class="judges-header">
           <h2>Guest Judges</h2>
@@ -324,10 +760,9 @@
         </div>
       </section>
       
-
-    <!-- Team Section -->
+  <!-- Team Section -->
     <section id="team" class="team-section">
-        <h2>Meet the Team</h2>
+        <h1>Meet the Team</h1>
         <div class="team-grid">
             <a href="https://www.linkedin.com/in/sai-hruday-reddy-nara-5b03632b3/" class="team-member">
                 <div class="team-image">
@@ -338,7 +773,7 @@
             </a>
             <a href="https://www.linkedin.com/in/shivank-singh-44413531a/" class="team-member">
                 <div class="team-image">
-                    <img src="Shivank2.png" alt="Team Member 2">
+                    <img src="Shivank.jpg" alt="Team Member 2">
                 </div>
                 <h3>Shivank Singh</h3>
                 <p>Executive Lead</p>
@@ -360,23 +795,23 @@
             <!-- Add more team members as needed -->
         </div>
     </section>
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="logo">
-                <img src="logo.png" alt="CodeCraft Academy Logo">
-            </div>
-            <div class="footer-links">
-                <a href="https://discord.gg/HUbd4eHVpt" target="_blank">Discord</a>
-                <a href="https://instagram.com/yourinstagram" target="_blank">Instagram</a>
-                <a href="https://linkedin.com/company/yourlinkedin" target="_blank">LinkedIn</a>
-            </div>
-            <div class="footer-text">
-                <p>© 2024 CodeCraft Academy. All rights reserved.</p>
-                <p>CodeCraft Academy and LG Hacks are fiscally sponsored by The Hack Foundation (d.b.a. Hack Club).</p>
-                <p>Nonprofit EIN: 81–2908499.</p>
-            </div>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="logo">
+            <img src="logo.png" alt="CodeCraft Academy Logo">
         </div>
-        </footer>
-    <script src="script.js"></script>
+        <div class="footer-links">
+            <a href="https://discord.gg/HUbd4eHVpt" target="_blank">Discord</a>
+            <a href="https://instagram.com/yourinstagram" target="_blank">Instagram</a>
+            <a href="https://linkedin.com/company/yourlinkedin" target="_blank">LinkedIn</a>
+        </div>
+        <div class="footer-text">
+            <p>© 2025 CodeCraft Academy. All rights reserved.</p>
+            <p>CodeCraft Academy and LG Hacks 2.0 are fiscally sponsored by The Hack Foundation (d.b.a. Hack Club).</p>
+            <p>Nonprofit EIN: 81–2908499.</p>
+        </div>
+    </div>
+    </footer>
+  <script src="script.js"></script>
 </body>
 </html>
