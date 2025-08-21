@@ -1,27 +1,67 @@
+/* General Theme */
 body {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-h2{
-    font-size: 50px;
-    text-align: center;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0d1b2a;
+  color: #eee;
+  line-height: 1.6;
 }
 
-/* Global styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #000;
-    color: #fff;
+h1, h2, h3 {
+  color: #ff6b35;
 }
 
-/* Navbar Styles */
-body {
-    margin: 0; /* Reset body margin */
+/* Fade-in + slide-up for sections */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
 }
+
+section:nth-of-type(2) { animation-delay: 0.2s; }
+section:nth-of-type(3) { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glowing hover for buttons */
+.btn {
+  position: relative;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(0,255,200,0.3);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,255,200,0.6),
+              0 0 40px rgba(0,255,200,0.4);
+}
+
+/* Floating cards (sponsors, team, judges) */
+.card {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+a.btn {
+  background: #ff6b35;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+a.btn:hover { background: #ff884d; }
+
+
 
 /*-- -------------------------- -->
 <---     Mobile Navigation      -->
@@ -63,7 +103,7 @@ body {
     content: "";
     width: 100%;
     height: 100%;
-    background: black;
+    background: rgb(5, 1, 23);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     opacity: 1;
     /* 12px - 24px */
@@ -119,7 +159,7 @@ body {
     width: 3.5rem;
     height: 3.5rem;
     margin: 0 0 0 auto;
-    background-color: #1a1a1a;
+    background-color: #2d204f;
     border: none;
     border-radius: 0.25rem;
     display: flex;
@@ -492,7 +532,7 @@ body {
     box-sizing: border-box;
     /* 12px - 24px */
     padding: clamp(0.75rem, 2vw, 1.5rem) 0;
-    background-color: black;
+    background-color: rgb(5, 1, 23);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     /* 12px - 24px */
     border-radius: clamp(0.75rem, 2vw, 1.5rem);
@@ -688,143 +728,468 @@ body {
 }
 
 
-/* Background Image and Overlay */
-.bg {
-  background: url(https://i.ibb.co/87GbbFP/2799006.jpg) no-repeat;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -300;
-}
-.bg:before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: #000;
-  position: fixed;
-  z-index: -100;
-  top: 0;
-  left: 0;
-  opacity: 0.3;
+/* Fade-in + slide-up for sections */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
 }
 
-/* Hero Section */
+section:nth-of-type(2) { animation-delay: 0.2s; }
+section:nth-of-type(3) { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glowing hover for buttons */
+.btn {
+  position: relative;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(0,255,200,0.3);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,255,200,0.6),
+              0 0 40px rgba(0,255,200,0.4);
+}
+
+/* Floating cards (sponsors, team, judges) */
+.card {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Hero */
 .hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   height: 100vh;
-  text-align: center;
-  background: url('hellooo.jpeg') ;
-  background-size: 100%;
-  position: relative;
-  animation: moveBg 30s linear infinite;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index:-100;
-}
-
-.hero h1 {
-  font-size: 10rem;
-  font-weight: 700;
-  z-index: 1;
-}
-
-.hero .highlight {
-  color: #fff;
-  background: linear-gradient(90deg, #e91e63, #2196f3);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* About Section Styles */
-
-/* About Section Styles */
-.about-section {
-  padding-left: 20px; /* Reduced padding for better mobile spacing */
-  padding-right: 20px;
-  text-align: center;
-  background-color: #000;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center the content */
-}
-
-.about-section h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 40px;
-}
-
-.about-cards {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
-  gap: 30px; /* Adds space between each card */
-  width: 100%; /* Full width on mobile */
-  max-width: 1600px; /* Limit the width for larger screens */
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background: url("images/hack3.jpg") center/cover no-repeat;
 }
-
-.about-card {
-  background-color: #111;
-  padding: 20px;
-  border-radius: 25px;
-  width: 100%; /* Full width for mobile */
-  max-width: 400px; /* Limit card width on larger screens */
-  box-shadow: 0 0 30px red;
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7); /* dark overlay for text readability */
+}
+.hero h1{
+    font-size: 8rem;
+}
+.hero p{
+  padding: 2rem;
+}
+.hero canvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index:0;
+}
+.hero-content {
   position: relative;
-  transition: all 0.3s ease;
-  margin: 0 auto; /* Center the cards */
+  z-index: 1;
+  text-align: cetner;
+  width: 50%
 }
-
-.about-card:hover {
-  box-shadow: 0 0 75px greenyellow;
-}
-
-.about-card h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.about-card p {
-  font-size: 1rem;
-  color: #ddd;
-}
-
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .about-cards {
-      flex-direction: column; /* Stack cards vertically */
-      gap: 20px; /* Adjust gap between cards */
-      align-items: center; /* Ensure cards are centered */
-  }
-
-  .about-card {
-      width: 90%; /* Make the card take up most of the screen width on mobile */
-      max-width: none; /* Remove max-width for mobile */
+  .hero h1{
+    font-size:4rem;
   }
 }
 
 
+
+/* Fade-in + slide-up for sections */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+section:nth-of-type(2) { animation-delay: 0.2s; }
+section:nth-of-type(3) { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glowing hover for buttons */
+.btn {
+  padding: 2rem;
+  position: relative;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(0,255,200,0.3);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,255,200,0.6),
+              0 0 40px rgba(0,255,200,0.4);
+}
+
+/* Floating cards (sponsors, team, judges) */
+.card {
+  animation: float 4s ease-in-out infinite;
+}
+/*-- -------------------------- -->
+<---          Gallery           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #gallery-404 {
+    padding: var(-sectionPadding);
+    padding-top: 5rem;
+    overflow: hidden;
+    position: relative;
+    background: #081524;
+  }
+  #gallery-404 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+  }
+  #gallery-404 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #gallery-404 .cs-title {
+    max-width: 20ch;
+  }
+  #gallery-404 .cs-button-group {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+    column-gap: 2rem;
+  }
+  #gallery-404 .cs-button {
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+    background-color: transparent;
+    border: none;
+    transition: color 0.3s;
+  }
+  #gallery-404 .cs-button:hover {
+    color: var(--primary);
+    cursor: pointer;
+  }
+  #gallery-404 .cs-button.cs-active {
+    color: var(--primary);
+  }
+  #gallery-404 .cs-gallery-wrapper {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  #gallery-404 .cs-gallery {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* 16px - 20px */
+    gap: clamp(1rem, 1.5vw, 1.25rem);
+    transition: transform 0.7s, opacity 0.3s, visibility 0.5s, top 0.3s, left 0.3s;
+    /* makes the transform scaling origin the top left corner, dictates the direction by which the scale transforms animate towards */
+    transform-origin: left top;
+  }
+  #gallery-404 .cs-gallery.cs-hidden {
+    /* by using visibility:hidden instead of display:none, we can see the animations from the opacity and transforms, display:none won't render animations. */
+    visibility: hidden;
+    /* prevents the mouse from interacting with it */
+    pointer-events: none;
+    /* hidden galleries have a 0 opacity, and we animate the opacity to 1 when they become active */
+    opacity: 0;
+    /* this top and left value help control the animation, by setting it to position absolute and left 0, the gallery won't fly off screen to the left, it will stop its position to be at the left edge of the .cs-container (left: 0). Same for the top:0 value, the gallery won't go past that position when it animates */
+    top: 0;
+    left: 0;
+    position: absolute;
+    /* prevents the hidden galleries from overflowing the section, and makes a nice animations to transition to and from */
+    transform: scaleY(0) scaleX(0);
+  }
+  #gallery-404 .cs-gallery.cs-hidden .cs-image {
+    /* when gallery is hidden, add these styles to the cs-image to animate from when cs-hidden is removed from the .cs-gallery */
+    transform: translateY(2.1875rem);
+    opacity: 0;
+  }
+  #gallery-404 .cs-image {
+    border-radius: 1.25rem;
+    width: 47%;
+    aspect-ratio: 1;
+    /* clips the image corners */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    /* when .cs-hidden is removed from the .cs-gallery, reset these values and animate between their hidden styles */
+    transform: translateY(0rem);
+    opacity: 1;
+    transition: opacity 0.6s, transform 0.6s;
+  }
+  #gallery-404 .cs-image:nth-of-type(1) {
+    /* changes transition delays at desktop */
+    /* these delays stagger the reveal of each image so they all go one after the other and not all at once */
+    transition-delay: 0.15s;
+  }
+  #gallery-404 .cs-image:nth-of-type(2) {
+    transition-delay: 0.3s;
+  }
+  #gallery-404 .cs-image:nth-of-type(3) {
+    transition-delay: 0.45s;
+  }
+  #gallery-404 .cs-image:nth-of-type(4) {
+    transition-delay: 0.6s;
+  }
+  #gallery-404 .cs-image:nth-of-type(5) {
+    transition-delay: 0.75s;
+  }
+  #gallery-404 .cs-image:nth-of-type(6) {
+    transition-delay: 0.9s;
+  }
+  #gallery-404 .cs-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* makes it act like a background image */
+    object-fit: cover;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #gallery-404 .cs-container {
+    max-width: 80rem;
+  }
+  #gallery-404 .cs-content {
+    text-align: left;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  #gallery-404 .cs-title {
+    margin: 0;
+  }
+  #gallery-404 .cs-image {
+    width: 31.8%;
+    aspect-ratio: 1;
+  }
+}
+/* Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #gallery-404 .cs-flex {
+    max-width: 34.375rem;
+  }
+  #gallery-404 .cs-gallery {
+    align-items: stretch;
+    justify-content: center;
+  }
+  #gallery-404 .cs-image {
+    width: 39.375rem;
+    max-width: 100%;
+    height: 25rem;
+  }
+  #gallery-404 .cs-image:nth-of-type(2),
+  #gallery-404 .cs-image:nth-of-type(3),
+  #gallery-404 .cs-image:nth-of-type(4),
+  #gallery-404 .cs-image:nth-of-type(5) {
+    width: 19.0625rem;
+  }
+  #gallery-404 .cs-image:nth-of-type(1) {
+    /* these delays stagger the reveal of each image so they all go one after the other and not all at once */
+    transition-delay: 0.15s;
+  }
+  #gallery-404 .cs-image:nth-of-type(2) {
+    transition-delay: 0.3s;
+  }
+  #gallery-404 .cs-image:nth-of-type(3) {
+    transition-delay: 0.45s;
+  }
+  #gallery-404 .cs-image:nth-of-type(4) {
+    transition-delay: 0.15s;
+  }
+  #gallery-404 .cs-image:nth-of-type(5) {
+    transition-delay: 0.3s;
+  }
+  #gallery-404 .cs-image:nth-of-type(6) {
+    transition-delay: 0.45s;
+  }
+}
+                                
+/* Fade-in + slide-up for sections */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+section:nth-of-type(2) { animation-delay: 0.2s; }
+section:nth-of-type(3) { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glowing hover for buttons */
+.btn {
+  position: relative;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(0,255,200,0.3);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,255,200,0.6),
+              0 0 40px rgba(0,255,200,0.4);
+}
+
+/* Floating cards (sponsors, team, judges) */
+.card {
+  animation: float 4s ease-in-out infinite;
+}
+/* About */
+.about h2{
+  font-size: 50px;
+}
+.about {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-right: 5rem;
+  margin-left:5rem
+}
+.card {
+  background: #1b263b;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+.card:hover { transform: translateY(-8px); }
+/* Fade-in + slide-up for sections */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+section:nth-of-type(2) { animation-delay: 0.2s; }
+section:nth-of-type(3) { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glowing hover for buttons */
+.btn {
+  position: relative;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(0,255,200,0.3);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,255,200,0.6),
+              0 0 40px rgba(0,255,200,0.4);
+}
+
+/* Floating cards (sponsors, team, judges) */
+.card {
+  animation: float 4s ease-in-out infinite;
+}
+/* Timeline */
+.timeline {
+  padding: 4rem 2rem;
+}
+.timeline h2{
+    text-align: center;
+    font-size: 50px;
+}
+.timeline-container {
+  display: flex;
+  gap: 2rem;
+}
+.days {
+  flex: 1;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+.days .day {
+  background: #1b263b;
+  color: #eee;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.days .day.active, .days .day:hover {
+  background: #ff6b35;
+}
+.events {
+  flex: 3;
+  margin-right:10rem;
+}
+.event-list.hidden { display: none; }
+.event {
+  background: #1b263b;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.event span {
+  color: #ff6b35;
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
 /* Schedule Section */
 .schedule-section {
   padding: 60px 20px;
   text-align: center;
-  background-color: #000;
+  background: #081524;
   color: #fff;
 }
 
@@ -838,7 +1203,7 @@ body {
   width: 90%;
   max-width: 600px;
   margin: 0 auto;
-  background-color: #111;
+  background-color: #1b263b;
   padding: 20px;
   border-radius: 10px;
 }
@@ -861,7 +1226,7 @@ body {
 }
 
 .schedule-table li span:last-child {
-  color: #f50057;
+  color: #ff6b35;
 }
 
 .event-details {
@@ -871,14 +1236,13 @@ body {
 }
 
 .event-details a {
-  color: #f50057;
+  color: #ff6b35;
   text-decoration: none;
 }
-
 .register-btn {
   margin-top: 30px;
   padding: 15px 30px;
-  background-color: #f50057;
+  background-color: #ff6b35;
   border: none;
   color: white;
   font-size: 1.2rem;
@@ -985,102 +1349,368 @@ section {
   color: white;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  padding: 5px 0;
-}
 
 @media (max-width: 768px) {
   .prizes-container {
       max-width: 90%;
   }
 }
-
-.speaker, .team-member, .faq-item {
-  margin: 20px;
+/*-- -------------------------- -->
+<---            FAQ             -->
+<--- -------------------------- -*/
+/* Fade-in + slide-up for sections */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
 }
 
-.speaker img, .team-member img, .sponsors-box img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+section:nth-of-type(2) { animation-delay: 0.2s; }
+section:nth-of-type(3) { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.speakers{
-  font-family: 'Arial', sans-serif;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  
-}
-
-.keynote-card {
-  
-  background: #161b22;
-  border-radius: 15px;
-  box-shadow: 0 0 30px red;
-  padding: 20px;
-  width: 300px;
-  text-align: center;
+/* Glowing hover for buttons */
+.btn {
   position: relative;
-  transition: all 0.3s ease;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(0,255,200,0.3);
 }
-.keynote-card:hover{
+
+.btn:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,255,200,0.6),
+              0 0 40px rgba(0,255,200,0.4);
 }
 
-.keynote-card::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  box-shadow: 0 0 100px linear-gradient(90deg, #e91e63, #2196f3);
-  z-index: -1;
-  border-radius: 10px;
+/* Floating cards (sponsors, team, judges) */
+.card {
+  animation: float 4s ease-in-out infinite;
 }
-.image-container {
-  margin: 0 auto;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  overflow: hidden;
-  border: 3px solid red;
-}
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #faq-1720 {
+    padding-top: 10rem;
+    padding: var(--sectionPadding);
+    position: relative;
+  }
+  #faq-1720 h2{
+    text-align:  center;
+  }
+  #faq-1720 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+    z-index: 1;
+  }
+  #faq-1720 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #faq-1720 .cs-title {
+    margin: 0;
+    text-align: center;
+    font-size: 50px;
+  }
+  #faq-1720 .cs-flex-group {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.3vw, 1.25rem);
+    position: relative;
+  }
+  #faq-1720 .cs-wrapper {
+    width: 100%;
+    position: relative;
+  }
+  #faq-1720 .cs-button-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.5vw, 1.25rem);
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #faq-1720 .cs-flex {
+    width: 100%;
+    /* 24px - 32px */
+    padding: clamp(1.5rem, 3vw, 2rem);
 
-.speaker-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    display: flex;
+    flex-direction: column;
+    order: 3;
+    gap: 1.25rem;
+  }
+  #faq-1720 .cs-option {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    padding: 0;
+    color: var(--bodyTextColor);
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 1;
+    transition: color .3s;
+  }
+  #faq-1720 .cs-option:hover {
+    color: var(--primary);
+    cursor: pointer;
+  }
+  #faq-1720 .cs-option.cs-active {
+    color: var(--primary);
+  }
+  #faq-1720 .cs-picture {
+    width: 100%;
+    /* 328px - 450px */
+    height: clamp(20.5rem, 30vw, 28.125rem);
+    /* 16px - 20px */
+    margin: 0 0 clamp(1rem, 2.4vw, 1.25rem);
+    order: 2;
+    position: relative;
+    z-index: 1;
+  }
+  #faq-1720 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #faq-1720 .cs-faq-group {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    order: 3;
+    gap: 0.5rem;
+    transition: transform 0.7s,
+                opacity 0.3s,
+                visibility 0.5s,
+                top 0.3s,
+                left 0.3s;
+    /* makes the transfrom scaling orgin the top left corner, dictates the direction by which the scale transforms animate towards */
+    transform-origin: top;
+    transform-style: preserve-3d;
+    perspective: 900px;
+  }
+  #faq-1720 .cs-faq-group.cs-hidden {
+    /* by using visibility:hidden instead of display:none, we can see the animations from the opacity and transforms, display:none won't render animations. */
+    visibility: hidden;
+    /* prevents the mouse from interacting with it */
+    pointer-events: none;
+    /* hidden galleries have a 0 opacity, and we animate the opacity to 1 when they become active */
+    opacity: 0;
+    /* this top and left value help control the animation, by setting it to position absolute and left 0, the FAQ won't fly off screen to the left, it will stop its position to be at the left edge of the .cs-flex-group (left: 0). Same for the bottom:0 value, the FAQ won't go past that position when it animates */
+    top: 0;
+    left: 0;
+    position: absolute;
+    /* prevents the hidden galleries from overflowing the section, and makes a nice animations to transition to and from */
+    transform: scaleY(0);
+  }
+  #faq-1720 .cs-faq-group.cs-hidden .cs-faq-item {
+    transform: rotateX(270deg);
 
-.speaker-name {
-  font-size: 1.5em;
-  margin-top: 15px;
-  margin-bottom: 5px;
-  color: #fff;
-}
+    opacity: 0;
+  }
+  #faq-1720 .cs-faq-item {
+    list-style: none;
+    width: 100%;
+    /* clips all corners of the button that overlap the rounded border */
+    overflow: hidden;
+    opacity: 1;    
+    top: 0;
+    transform: rotateX(0deg);
+    transition: transform 0.6s,
+                opacity 0.3s;
+  }
+  #faq-1720 .cs-faq-item:nth-of-type(2) {
+    transition-delay: 0.1s;
+  }
+  #faq-1720 .cs-faq-item:nth-of-type(3) {
+    transition-delay: 0.2s;
+  }
+  #faq-1720 .cs-faq-item:nth-of-type(4) {
+    transition-delay: 0.3s;
+  }
+  #faq-1720 .cs-faq-item:nth-of-type(5) {
+    transition-delay: 0.4s;
+  }
+  #faq-1720 .cs-faq-item:nth-of-type(6) {
+    transition-delay: 0.5s;
+  }
+  #faq-1720 .cs-faq-item:nth-of-type(7) {
+    transition-delay: 0.6s;
+  }
+  #faq-1720 .cs-faq-item:nth-of-type(8) {
+    transition-delay: 0.7s;
+  }
+  #faq-1720 .cs-faq-item:nth-of-type(9) {
+    transition-delay: 0.8s;
+  }
+  #faq-1720 .cs-faq-item:nth-of-type(10) {
+    transition-delay: 0.9s;
+  }
+  #faq-1720 .cs-faq-item.active .cs-button {
+    color: var(--primary);
+  }
+  #faq-1720 .cs-faq-item.active .cs-button:before {
+    transform: rotate(315deg);
+  }
+  #faq-1720 .cs-faq-item.active .cs-button:after {
 
-.speaker-title {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: red;
-}
+    transform: rotate(-315deg);
+  }
+  #faq-1720 .cs-faq-item.active .cs-item-p {
+    height: auto;
+    /* 20px - 24px bottom */
+    /* 16px - 24px left & right */
+    padding: 0 clamp(1rem, 2vw, 1.5rem) clamp(1.25rem, 1.3vw, 1.5rem);
+    opacity: 1;
+  }
+  #faq-1720 .cs-button {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.2em;
+    text-align: left;
+    font-weight: bold;
+    /* 16px - 24px top & bottom */
+    /* 16px - 20px left & right */
+    padding: clamp(1rem, 2vw, 1.5rem) clamp(1rem, 2vw, 1.25rem);
 
-.speaker-bio {
-  font-size: 0.9em;
-  color: #aaa;
-  line-height: 1.5;
-}
+    border-radius: 20%;
+    color: white;
+    background-color: #1b263b;
+    display: block;
+    width: 100%;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  #faq-1720 .cs-button:hover {
+    cursor: pointer;
+  }
+  #faq-1720 .cs-button:before {
+    /* left line */
+    content: "";
+    width: 0.5rem;
+    height: 0.125rem;
+    background-color: var(--headerColor);
+    opacity: 1;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 1.5rem;
+    transform: rotate(45deg);
+    /* animate the transform from the left side of the x axis, and the center of the y */
+    transform-origin: left center;
+    transition: transform 0.5s;
+  }
+  #faq-1720 .cs-button:after {
+    /* right line */
+    content: "";
+    width: 0.5rem;
+    height: 0.125rem;
+    background-color: var(--headerColor);
+    opacity: 1;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 1.3125rem;
+    transform: rotate(-45deg);
+    /* animate the transform from the right side of the x axis, and the center of the y */
+    transform-origin: right center;
+    transition: transform 0.5s;
+  }
+  #faq-1720 .cs-button-text {
+    width: 80%;
+    display: block;
+  }
+  #faq-1720 .cs-item-p {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    width: 100%;
+    height: 0;
+    margin: 0;
+    /* 16px - 24px */
+    padding: 0 clamp(1rem, 2vw, 1.5rem);
+    opacity: 0;
 
+    color: var(--bodyTextColor);
+    /* clips the text so it doesn't show up */
+    overflow: hidden;
+    transition: opacity 0.3s, padding-bottom 0.3s;
+  }
+}
+/* Inbetween - 600px */
+@media only screen and (min-width: 37.5rem) {
+  #faq-1720 .cs-button-group {
+    width: 80%;
+    max-width: 22.0625rem;
+    flex-direction: row;
+    align-items: stretch;
+    flex: none;
+  }
+  #faq-1720 .cs-content {
+    width: 100%;
+  }
+  #faq-1720 .cs-picture {
+    /* 300px - 493px */
+    min-height: clamp(18.75rem, 30vw, 30.8125rem);
+    margin: 0;
+    height: 100%;
+    flex: none;
+    order: 3;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 48rem) {
+  #faq-1720 .cs-flex-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* 20px - 80px */
+    column-gap: clamp(1.25rem, 3vw, 5rem);
+  }
+  #faq-1720 .cs-button-group {
+    flex-direction: column;
+    flex: auto;
+  }
+  #faq-1720 .cs-picture {
+    max-height: 31.25rem;
+  }
+}
+                                
 section{
   padding:50px;
 }
@@ -1088,8 +1718,7 @@ section{
 /* Sponsor Section Styling */
 .sponsors {
   text-align: center;
-  padding: 40px;
-  background-color:black; /* Optional dark background */
+  padding: 40px;/* Optional dark background */
   color: #ffffff;
   font-family: Arial, sans-serif;
 }
@@ -1109,6 +1738,7 @@ section{
 }
 
 .sponsor-logos {
+  background: #1b263b;
   display: flex;
   justify-content: center;
   gap: 50px;
@@ -1116,6 +1746,7 @@ section{
 }
 
 .sponsor-logos img {
+  
   max-width: 300px;
   height: auto;
   transition: transform 0.2s ease-in-out;
@@ -1198,7 +1829,7 @@ section{
 /* Guest Judges Section */
 .guest-judges {
   padding: 50px 20px;
-  background-color: black;
+
   color: #fff;
   text-align: center;
 }
@@ -1216,7 +1847,7 @@ section{
 }
 
 .judge-card {
-  background: #1c1c1c;
+  background:#1b263b ;
   border-radius: 10px;
   padding: 20px;
   width: 280px; /* Optimized for mobile */
@@ -1269,7 +1900,7 @@ section{
 /* Judges Section */
 .judges-section {
   padding: 50px 10%;
-  background-color: black;
+  background-color: #1b263b;
   color: white;
   text-align: center;
 }
@@ -1288,19 +1919,19 @@ section{
 }
 
 .judge-card {
-  background: black;
+  background: #1b263b;
   border-radius: 10px;
   padding: 20px;
   text-align: center;
   width: 90%;
   max-width: 300px; /* Ensure cards don’t stretch too wide */
-  box-shadow: 0 0 6px red;
+  box-shadow: 0 0 6px orange;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .judge-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 10px green;
+  box-shadow: 0 0 10px orange;
 }
 
 .judge-card img {
@@ -1338,53 +1969,10 @@ section{
   }
 }
 
-
-.linkedin-link img {
-  width: 24px;
-  height: 24px;
-}
-.sponsors-box img{
-  width:20%;
-  height:10%;
-}
-
-/* FAQ Section */
-.faq-question {
-  background-color: rgb(18, 13, 13);
-  color: white;
-  border-radius: 25px;
-  padding: 30px;
-  border: none;
-  cursor: pointer;
-  width: 50%;
+.team-section h1{
   text-align: center;
-  font-size: 20px;
+  font-size: 75px;
 }
-
-.faq-answer {
-  display: none;
-  padding: 10px;
-  color: white;
-  background-color: black;
-}
-
-.faq-item {
-  margin: 20px 0;
-}
-
-/* Team Section */
-.team-section {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: black;
-}
-
-.team-section h2 {
-  font-size: 2.5rem;
-  color: white;
-  margin-bottom: 20px;
-}
-
 /* Team Grid */
 .team-grid {
   display: grid;
@@ -1396,7 +1984,7 @@ section{
 
 /* Team Member Card */
 .team-member {
-  background: #161b22;
+  background: #1b263b;
   border-radius: 12px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -1430,9 +2018,7 @@ section{
   object-fit: cover;
 }
 
-.team-member:hover .team-image {
-  border-color: #ff1a1a;
-}
+
 
 /* Name & Role */
 .team-member h3 {
@@ -1458,310 +2044,201 @@ section{
   }
 }
 
-/* Footer */
 .footer {
-  background-color: #000;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+  color: #fff; /* White text color */
+  padding: 20px; /* Padding */
+  text-align: center; /* Center text */
+}
+
+.footer-content {
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items */
 }
 
 .footer-links a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 15px;
+  color: #fff; /* White link color */
+  text-decoration: none; /* No underline */
+  margin: 0 15px; /* Horizontal spacing between links */
 }
 
 .footer-links a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline on hover */
 }
 
 .logo img {
-  max-width: 100px;
-  margin-bottom: 15px;
+  max-width: 100px; /* Adjust logo size */
+  margin-bottom: 15px; /* Space below logo */
 }
 
 .footer-text {
-  margin-top: 10px;
-  font-size: 0.9rem;
+  margin-top: 10px; /* Space above text */
 }
+/*-- -------------------------- -->
+<---          Footer            -->
+<--- -------------------------- -*/
 
-/* Mobile Optimizations */
-@media (max-width: 768px) {
-  .hero h1 {
-      font-size: 10rem;
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #footer-1147 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
   }
-
-  .about-section {
-      padding-left: 20px;
-      padding-right: 20px;
+  #footer-1147 .cs-container {
+      width: 100%;
+      max-width: 80rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
   }
-
-  .about-card {
-      width: 90%;
-      margin-bottom: 20px;
+  #footer-1147 .cs-top {
+      width: 100%;
+      /* 32px - 40px */
+      margin-bottom: clamp(2rem, 4vw, 2.5rem);
+      padding-bottom: clamp(2rem, 4vw, 2.5rem);
+      border-bottom: 1px solid #484848;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
   }
-
-  .schedule-table li {
+  #footer-1147 .cs-ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      row-gap: 0.5rem;
+      /* 28px - 40px */
+      column-gap: clamp(1.75rem, 4vw, 2.5rem);
+  }
+  #footer-1147 .cs-li {
+      list-style: none;
+  }
+  #footer-1147 .cs-link {
+      /* 14px - 16px */
+      font-size: clamp(0.875rem, 1.5vw, 1rem);
+      line-height: 1.5em;
+      text-decoration: none;
+      margin: 0;
+      color: #bababa;
+      display: block;
+      transition: color 0.3s;
+  }
+  #footer-1147 .cs-link:hover {
+      color: var(--secondary);
+  }
+  #footer-1147 .cs-logo {
+      width: 10.5rem;
+      height: auto;
+      display: block;
+  }
+  #footer-1147 .cs-logo-img {
+      width: 100%;
+      height: auto;
+      display: block;
+  }
+  #footer-1147 .cs-bottom {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+  }
+  #footer-1147 .cs-social {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+  }
+  #footer-1147 .cs-social-li {
+      list-style: none;
+  }
+  #footer-1147 .cs-social-link {
+      width: 2rem;
+      height: 2rem;
+      background-color: #484848;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s;
+  }
+  #footer-1147 .cs-social-link:hover {
+      background-color: var(--secondary);
+  }
+  #footer-1147 .cs-social-link:hover .cs-social-icon {
+      filter: grayscale(1) brightness(0);
+      opacity: 1;
+  }
+  #footer-1147 .cs-social-icon {
+      width: 0.75rem;
+      height: auto;
+      display: block;
+      opacity: 0.5;
+  }
+  #footer-1147 .cs-copyright {
       font-size: 1rem;
+      line-height: 1.5em;
+      margin: 0;
+      color: #bababa;
+      display: block;
   }
-
-  .register-btn {
-      width: 50%;
-      font-size: 1rem;
-      padding: 10px 20px;
+  #footer-1147 .cs-copyright-link {
+      font-size: inherit;
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s;
   }
-
-  .faq-question {
-      width: 90%;
+  #footer-1147 .cs-copyright-link:hover {
+      color: var(--secondary);
   }
-
-  .footer {
-      padding: 10px;
+  #footer-1147 .cs-background {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
   }
-
-  .footer-links a {
-      margin: 0 10px;
-      font-size: 0.9rem;
+  #footer-1147 .cs-background:before {
+      /* background color overlay */
+      content: "";
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 100%;
+      background: #1a1a1a;
+      opacity: 0.96;
+      top: 0;
+      left: 0;
+      z-index: 1;
   }
-
-  .footer-text {
-      font-size: 0.9rem;
+  #footer-1147 .cs-background img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      /* Makes img tag act as a background image */
+      object-fit: cover;
   }
 }
-
-@media (max-width: 576px) {
-  .team-grid {
-      grid-template-columns: 1fr;
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #footer-1147 .cs-top {
+      flex-direction: row;
+      justify-content: space-between;
   }
-
-  .team-member h3 {
-      font-size: 1rem;
-  }
-
-  .team-member p {
-      font-size: 0.9rem;
-  }
-
-  .hero h1 {
-      font-size: 2rem;
-  }
-
-  .schedule-table ul {
-      padding: 5px;
-  }
-
-  .schedule-table li {
-      padding: 8px 0;
-      font-size: 0.9rem;
-  }
-
-  .register-btn {
-      padding: 10px;
-      font-size: 0.9rem;
-  }
-
-  section {
-      padding: 20px 10px;
-  }
-
-  .footer {
-    background-color: #000; /* Black background */
-    color: #fff; /* White text color */
-    padding: 20px; /* Padding */
-    text-align: center; /* Center text */
-  }
-  
-  .footer-content {
-    display: flex; /* Flexbox for layout */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items */
-  }
-  
-  .footer-links a {
-    color: #fff; /* White link color */
-    text-decoration: none; /* No underline */
-    margin: 0 15px; /* Horizontal spacing between links */
-  }
-  
-  .footer-links a:hover {
-    text-decoration: underline; /* Underline on hover */
-  }
-  
-  .logo img {
-    max-width: 100px; /* Adjust logo size */
-    margin-bottom: 15px; /* Space below logo */
-  }
-  
-  .footer-text {
-    margin-top: 10px; /* Space above text */
-  }
-  /*-- -------------------------- -->
-  <---          Footer            -->
-  <--- -------------------------- -*/
-  
-  /* Mobile - 360px */
-  @media only screen and (min-width: 0rem) {
-    #footer-1147 {
-        padding: var(--sectionPadding);
-        position: relative;
-        z-index: 1;
-    }
-    #footer-1147 .cs-container {
-        width: 100%;
-        max-width: 80rem;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    #footer-1147 .cs-top {
-        width: 100%;
-        /* 32px - 40px */
-        margin-bottom: clamp(2rem, 4vw, 2.5rem);
-        padding-bottom: clamp(2rem, 4vw, 2.5rem);
-        border-bottom: 1px solid #484848;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-    }
-    #footer-1147 .cs-ul {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        row-gap: 0.5rem;
-        /* 28px - 40px */
-        column-gap: clamp(1.75rem, 4vw, 2.5rem);
-    }
-    #footer-1147 .cs-li {
-        list-style: none;
-    }
-    #footer-1147 .cs-link {
-        /* 14px - 16px */
-        font-size: clamp(0.875rem, 1.5vw, 1rem);
-        line-height: 1.5em;
-        text-decoration: none;
-        margin: 0;
-        color: #bababa;
-        display: block;
-        transition: color 0.3s;
-    }
-    #footer-1147 .cs-link:hover {
-        color: var(--secondary);
-    }
-    #footer-1147 .cs-logo {
-        width: 10.5rem;
-        height: auto;
-        display: block;
-    }
-    #footer-1147 .cs-logo-img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-    #footer-1147 .cs-bottom {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-    }
-    #footer-1147 .cs-social {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0.5rem;
-    }
-    #footer-1147 .cs-social-li {
-        list-style: none;
-    }
-    #footer-1147 .cs-social-link {
-        width: 2rem;
-        height: 2rem;
-        background-color: #484848;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: background-color 0.3s;
-    }
-    #footer-1147 .cs-social-link:hover {
-        background-color: var(--secondary);
-    }
-    #footer-1147 .cs-social-link:hover .cs-social-icon {
-        filter: grayscale(1) brightness(0);
-        opacity: 1;
-    }
-    #footer-1147 .cs-social-icon {
-        width: 0.75rem;
-        height: auto;
-        display: block;
-        opacity: 0.5;
-    }
-    #footer-1147 .cs-copyright {
-        font-size: 1rem;
-        line-height: 1.5em;
-        margin: 0;
-        color: #bababa;
-        display: block;
-    }
-    #footer-1147 .cs-copyright-link {
-        font-size: inherit;
-        text-decoration: none;
-        color: inherit;
-        transition: color 0.3s;
-    }
-    #footer-1147 .cs-copyright-link:hover {
-        color: var(--secondary);
-    }
-    #footer-1147 .cs-background {
-        width: 100%;
-        height: 100%;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-    }
-    #footer-1147 .cs-background:before {
-        /* background color overlay */
-        content: "";
-        position: absolute;
-        display: block;
-        height: 100%;
-        width: 100%;
-        background: #1a1a1a;
-        opacity: 0.96;
-        top: 0;
-        left: 0;
-        z-index: 1;
-    }
-    #footer-1147 .cs-background img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        /* Makes img tag act as a background image */
-        object-fit: cover;
-    }
-  }
-  /* Tablet - 768px */
-  @media only screen and (min-width: 48rem) {
-    #footer-1147 .cs-top {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    #footer-1147 .cs-bottom {
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  #footer-1147 .cs-bottom {
+      flex-direction: row;
+      justify-content: space-between;
   }
 }
