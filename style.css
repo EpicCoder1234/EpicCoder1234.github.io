@@ -766,7 +766,7 @@ section:nth-of-type(3) { animation-delay: 0.4s; }
 /* Hero */
 .hero {
   position: relative;
-  height: 100vh;
+  height: 115vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -851,14 +851,14 @@ section:nth-of-type(3) { animation-delay: 0.4s; }
     }
     .stats-container {
         grid-template-columns: 1fr; /* Stack stats vertically on small screens */
-        gap: 0.5rem;
+        gap: 0.2rem;
         padding: 1rem;
     }
     .stat-number {
         font-size: 1rem;
     }
     .stat-label {
-        font-size: 0.75rem;
+        font-size: 0.5rem;
     }
 }
 /* Responsive Adjustments */
