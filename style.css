@@ -784,7 +784,7 @@ section:nth-of-type(3) { animation-delay: 0.4s; }
     font-size: 8rem;
 }
 .hero p{
-  padding: 2rem;
+  padding: 0.5rem;
 }
 .hero canvas {
   position: absolute;
@@ -808,7 +808,7 @@ section:nth-of-type(3) { animation-delay: 0.4s; }
     padding: 1.5rem 1rem;
     margin-top: 2rem;
     max-width: 600px;
-    width: 100%;
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
@@ -842,6 +842,9 @@ section:nth-of-type(3) { animation-delay: 0.4s; }
 @media (max-width: 640px) {
     h1 {
         font-size: 3rem;
+    }
+    h2{
+      font-size: 1rem;
     }
     .stats-container {
         grid-template-columns: 1fr; /* Stack stats vertically on small screens */
