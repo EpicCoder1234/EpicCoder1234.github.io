@@ -798,6 +798,63 @@ section:nth-of-type(3) { animation-delay: 0.4s; }
   text-align: cetner;
   width: 100%
 }
+/* Stats Section Styling */
+.stats-container {
+    background-color: rgba(255, 255, 255, 0.05); /* Semi-transparent card background */
+    backdrop-filter: blur(5px);
+    margin:0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    max-width: 600px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.stat-number {
+    font-size: 2.25rem; /* Large numbers */
+    font-weight: 800;
+    color: #38bdf8; /* Sky blue for stats */
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.875rem; /* Small label text */
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #94a3b8; /* Slate gray */
+    margin-top: 0.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 3rem;
+    }
+    .stats-container {
+        grid-template-columns: 1fr; /* Stack stats vertically on small screens */
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+    .stat-number {
+        font-size: 2rem;
+    }
+    .stat-label {
+        font-size: 0.75rem;
+    }
+}
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .hero h1{
@@ -824,20 +881,44 @@ section:nth-of-type(3) { animation-delay: 0.4s; }
   }
 }
 
-/* Glowing hover for buttons */
-.btn {
-  padding: 2rem;
-  position: relative;
-  transition: 0.3s;
-  box-shadow: 0 0 10px rgba(0,255,200,0.3);
-}
 
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0,255,200,0.6),
-              0 0 40px rgba(0,255,200,0.4);
-}
+/* --- Button Styling --- */
+        /* Note: We rely heavily on Tailwind classes for responsiveness, 
+           so we removed conflicting custom display/width properties. */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 9999px;
+            transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+            text-decoration: none;
+            /* width is controlled by w-full on mobile, and flex on desktop */
+        }
 
+        /* Primary Button (Register) - Highlighted */
+        .btn-primary {
+            background-color: #ff6347; /* Tomato red */
+            color: #0d1117;
+            box-shadow: 0 4px 15px rgba(255, 99, 71, 0.4);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 99, 71, 0.6);
+        }
+
+        /* Secondary Buttons (Discord/Devpost) - Outlined */
+        .btn-secondary {
+            background-color: rgb(71, 30, 4);
+            color: white; /* Light gray text */
+            border: 2px solid #475569; /* Gray border */
+        }
+        .btn-secondary:hover {
+            border-color: #38bdf8; /* Blue hover effect */
+            color: #38bdf8;
+            background-color: rgba(56, 189, 248, 0.1);
+        }
+        
 /* Floating cards (sponsors, team, judges) */
 .card {
   animation: float 4s ease-in-out infinite;
@@ -1249,23 +1330,7 @@ section:nth-of-type(3) { animation-delay: 0.4s; }
   color: #ff6b35;
   text-decoration: none;
 }
-.register-btn {
-  margin-top: 30px;
-  padding: 15px 30px;
-  background-color: #ff6b35;
-  border: none;
-  color: white;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
 
-.register-btn:hover {
-  background-color: #ff4081;
-}
 
 /* Galaxy Background Animation */
 @keyframes moveBg {
