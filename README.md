@@ -1,8 +1,7 @@
-# Welcome to the official LG Hacks website!
+# 👋 Welcome to the Official LG Hacks Website!
 
+Explore the open-source projects we built during **LG Hacks 2.0** and **LG Hacks 1**!  
+Check them out on our [Devpost](https://devpost.com/hackathons?search=lg%20hacks) to see all the amazing ideas our participants brought to life.  
 
-To see our collection of open-sourced projects from LG Hacks 2.0 and LG Hacks 1, you can visit our (Devpost) [https://devpost.com/hackathons?search=lg%20hacks] and see all the individual projects!
-<br>
-
-Want to see something changed or fixed on the website? Make a PR! I'll try my best to review it soon.
-<br>
+💡 **Got suggestions or found a bug?**  
+Feel free to open a pull request — I’ll review it as soon as I can!
