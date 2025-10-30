@@ -5,3 +5,6 @@ Check them out on our [Devpost](https://devpost.com/hackathons?search=lg%20hacks
 
 💡 **Got suggestions or found a bug?**  
 Feel free to open a pull request — I’ll review it as soon as I can!
+
+💵 **Want to see our finances? We're fully transperent, and the banking platform we use is (open-sourced) [https://github.com/hackclub/hcb] too!**
+https://hcb.hackclub.com/codecraft-academy/transactions
